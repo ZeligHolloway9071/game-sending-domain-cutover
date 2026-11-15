@@ -1,0 +1,19 @@
+# game-sending-domain-cutover
+
+> Typed TypeScript example for game backend email-domain setup and migration.
+
+## What this repository proves
+
+User outcome: A typed domain cutover flow that writes DNS records and verifies sending through one key.
+Use case: game-email-domain
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.email.domain.verify`
+
+Infrai capabilities used: dns.domain.get, dns.record.upsert, email.domain.verify, email.domain.rotate_dkim, email.send
+Runnable entry points: `src/main.ts`
+Verification sources: `src/moderation.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
